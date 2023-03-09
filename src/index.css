@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("../public/fonts/SVN-Gilroy-Bold.otf");
+}
+
+@font-face {
+  font-family: "Gilroy-Black";
+  src: url("../public/fonts/SVN-Gilroy-Black.otf");
+}
+
+button {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 18px 30px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #0047ff 0%, #57048a 100%);
+}
