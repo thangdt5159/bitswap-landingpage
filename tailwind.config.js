@@ -28,7 +28,19 @@ module.exports = {
       backgroundImage: {
         bgGradient1: "linear-gradient(135deg, var(--tw-gradient-stops))",
         bgGradient2: "linear-gradient(135deg, var(--tw-gradient-stops))",
+        bgGradient3:
+          "linear-gradient(203.65deg, rgba(19, 7, 43, 0) 40.25%, rgba(19, 7, 43, 0.6) 86.29%)",
+        bgGradient4: "linear-gradient(135deg, #3A285C 0%, #1A093A 100%)",
         bgHeader: 'url("/images/banner-bg-2.jpg")',
+        bgFooter: 'url("/images/logo-2.png")',
+      },
+      keyframes: {
+        spin: {
+          to: { transform: "rotate(360deg)" },
+        },
+      },
+      animation: {
+        spin: "spin 30s linear infinite",
       },
     },
   },

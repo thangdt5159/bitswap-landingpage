@@ -1,19 +1,39 @@
 import React from "react";
 
 const Header = () => {
+  const buttons = [
+    {
+      id: 1,
+      title: "Dex",
+    },
+    {
+      id: 2,
+      title: "Launchpad",
+    },
+    {
+      id: 3,
+      title: "Connect Wallet",
+    },
+  ];
+
   return (
-    <section>
-      <div className="relative bg-bgHeader bg-no-repeat bg-cover bg-center z-[1] before:bg-bgBlack/50 before:w-full before:h-full before:absolute before:z-[-1]">
-        <div className="pt-[300px] pb-[400px]">
+    <section className="pt-[60px] md:pt-[104px]">
+      <div className="relative bg-bgHeader bg-no-repeat bg-[length:auto_100%] md:bg-cover bg-center z-[1] before:bg-bgBlack/50 before:w-full before:h-full before:absolute before:z-[-1]">
+        <div className="md:pt-[300px] md:pb-[400px] py-[60px] md:py-0">
           <div className="md:max-w-[1320px] mx-auto px-3">
             <div className="mx-auto text-center">
-              <h1 className="text-[82px] text-white font-GilroyBlack mb-5 leading-[105px]">
-                Metaverse Ecosystem For Growing New Projects
+              <h1 className="text-[30px] md:text-[82px] text-white font-GilroyBold md:font-GilroyBlack mb-5 md:leading-[105px]">
+                Swap with Speed, Security, and Bitcoin's Power
               </h1>
               <div className="mt-10">
-                <button className="mr-5">Open App</button>
-                <button className="mr-5">Buy MWP Tokens</button>
-                <button className="mr-5">Connect wallet</button>
+                {buttons.map((item) => (
+                  <button
+                    key={item.id}
+                    className="mr-5 text-[14px] py-[9px] px-[15px] md:text-base md:min-w-[150px] relative z-[1] before:absolute before:w-full before:h-full before:bg-bgGradient2 before:from-gradColorPink before:to-gradColorBlue before:z-[-1] before:top-0 before:left-0 before:rounded-[6px] before:scale-x-0 before:transition-all before:duration-500 hover:before:scale-x-100"
+                  >
+                    {item.title}
+                  </button>
+                ))}
               </div>
             </div>
           </div>

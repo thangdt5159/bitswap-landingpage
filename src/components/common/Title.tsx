@@ -8,7 +8,7 @@ const Title = ({ title, header }: any) => {
           {header}
         </span>
       </div>
-      <h2 className="text-[44px] mb-[25px] font-GilroyBold leading-[1.2]">
+      <h2 className="capitalize text-[44px] mb-[25px] font-GilroyBold leading-[1.2]">
         {title}
       </h2>
     </section>

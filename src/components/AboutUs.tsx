@@ -2,35 +2,40 @@ import Image from "next/image";
 import React from "react";
 import boy from "../../public/images/boy.png";
 
-const AboutUs = () => {
-  const socials = [
-    {
-      id: 1,
-      icon: "",
-      url: "",
-    },
-    {
-      id: 2,
-      icon: "",
-      url: "",
-    },
-    {
-      id: 3,
-      icon: "",
-      url: "",
-    },
-    {
-      id: 4,
-      icon: "",
-      url: "",
-    },
-    {
-      id: 5,
-      icon: "",
-      url: "",
-    },
-  ];
+export const socials = [
+  {
+    id: 1,
+    icon: "",
+    title: "facebook",
+    url: "",
+  },
+  {
+    id: 2,
+    icon: "",
+    title: "twitter",
+    url: "",
+  },
+  {
+    id: 3,
+    icon: "",
+    title: "telegram",
+    url: "",
+  },
+  {
+    id: 4,
+    icon: "",
+    title: "discord",
+    url: "",
+  },
+  {
+    id: 5,
+    icon: "",
+    title: "",
+    url: "",
+  },
+];
 
+const AboutUs = () => {
   return (
     <section className="bg-[#170f32]">
       <div className="pt-[150px]">
@@ -38,25 +43,28 @@ const AboutUs = () => {
           <div className="relative z-[1] md:w-1/2 px-3 before:absolute before:top-0 before:bottom-[60px] before:left-0 before:right-0 before:mx-auto before:w-[500px] before:h-[500px] before:rounded-full before:bg-white/10 before:z-[-1]">
             <Image src={boy} alt="" className="md:max-w-[433px] mx-auto" />
           </div>
-          <div className="md:w-1/2 mb-[30px] px-3">
+          <div className="md:w-1/2 mb-[10px] px-3">
             <div className="mb-[10px]">
-              <span className="tracking-[0.1em] font-semibold [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] bg-bgGradient1 from-gradColor1 to-gradColor2">
-                ABOUT US
+              <span className="uppercase tracking-[0.1em] font-semibold [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] bg-bgGradient1 from-gradColor1 to-gradColor2">
+                What Bitswap
               </span>
             </div>
-            <h2 className="text-[44px] mb-[25px] font-GilroyBold leading-[1.2]">
-              Muva Will Be The Best Choice For Your Next Project
+            <h2 className="text-[40px] mb-[25px] font-GilroyBold leading-[1.2]">
+              Join Bitswap today and experience a new DeFi revolution
             </h2>
-            <p className="mb-[30px] leading-[32px] text-lightGray">
-              A Gamified Marketplace Dedicated To The Metaverse And Gaming
-              Assets. The Metaverse Marketplace Allows Users To Trade, Auction,
-              And Rent Virtual Ownership Assets From Various Metaverse And
-              Gaming Projects Gamified Marketplace Dedicated To The.
+            <p className="mb-[30px] text-[15px] leading-[32px] text-lightGray">
+              Bitswap is the latest decentralized DeFi project being built on
+              the Bitcoin Stacks Layer 2 blockchain. Bitswap will provide users
+              with a decentralized exchange and a launch platform to support new
+              DeFi and NFT projects.
             </p>
-            <p className="mb-[30px] leading-[32px] text-lightGray">
-              A Gamified Marketplace Dedicated To The Metaverse And Gaming
-              Assets. The Metaverse Marketplace Allows Users To Trade, Auction,
-              And Rent Virtual Ownership.
+            <p className="mb-[30px] text-[15px] leading-[32px] text-lightGray">
+              With programmability for Bitcoin, Bitswap is building a fully
+              featured, safe and secure decentralized DeFi ecosystem. Bitswap
+              will help users experience fast, low-cost, and more liquid
+              transactions, and provide developers with a flexible development
+              platform to build new applications on top of its Layer 2
+              blockchain Bitcoin.
             </p>
             <div className="flex items-center">
               {socials.map((item) => (

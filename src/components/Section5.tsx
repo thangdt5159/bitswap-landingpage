@@ -13,11 +13,11 @@ const Section5 = () => {
     },
     {
       id: 2,
-      title: "Metaverse Marketplace",
+      title: "Dex",
     },
     {
       id: 3,
-      title: "MetaFi DeFi Vault",
+      title: "NFT Marketplace (Comming soon)",
     },
   ];
 
@@ -26,16 +26,19 @@ const Section5 = () => {
       id: 1,
       image: launchpadImg,
       title: "Launchpad",
+      des: "Allows new projects to raise capital from the community, while helping investors find potential projects and invest in them safely and conveniently. The platform also provides security and risk control features, which reduce risks for investors and users.",
     },
     {
       id: 2,
       image: metaverse,
-      title: "Metaverse Marketplace",
+      title: "Dex",
+      des: "Users can exchange cryptocurrencies quickly, securely, and save on transaction fees. In addition, the exchange also supports trading with automatic swap and margin trading, which enhances liquidity and flexibility for users.",
     },
     {
       id: 3,
       image: metaFi,
-      title: "MetaFi DeFi Vault",
+      title: "NFT Marketplace",
+      des: "Bitswap is planning to build an NFT Marketplace in the near future. This marketplace will allow users to buy, sell and exchange decentralized assets represented by NFTs. These NFTs can be digital works of art, decentralized games, or other digital products.",
     },
   ];
 
@@ -45,20 +48,20 @@ const Section5 = () => {
     <section className="bg-[#1a1135]">
       <div className="md:pb-[100px] md:max-w-[1320px] mx-auto">
         <div className="px-3">
-          <Title title="The Ignition Of Metaverse" header="HOW IT WORKS" />
+          <Title title="Your Ultimate DeFi Destination" header="Our Products" />
           <div className="flex justify-center gap-[10px] mb-[50px]">
             {tab.map((item) => (
               <div
                 key={item.id}
                 onClick={() => setActiveTab(item.id)}
-                className={`p-[2px] ${
+                className={`p-[2px] md:max-w-[400px] ${
                   activeTab === item.id
                     ? "bg-bgGradient1 from-gradColor1 to-gradColor2"
                     : "bg-[#0F0824]"
                 } rounded-[10px] cursor-pointer`}
               >
-                <div className="bg-[#0F0824] py-7 px-[90px] rounded-[10px] text-[20px] font-medium select-none">
-                  {item.title}
+                <div className="capitalize bg-[#0F0824] h-full flex items-center justify-center text-center py-7 px-[90px] rounded-[10px] text-[20px] font-medium select-none">
+                  <p>{item.title}</p>
                 </div>
               </div>
             ))}
@@ -81,11 +84,7 @@ const Section5 = () => {
                   {item.title}
                 </div>
                 <p className="md:w-[58.5%] px-3 leading-[32px] text-lightGray">
-                  A Gamified Marketplace Dedicated To The Metaverse And Gaming
-                  Assets. The Metaverse Marketplace Allows Users To Trade,
-                  Auction, And Rent Virtual Ownership Assets From Various
-                  Metaverse And Gaming Projects. The Metaverse Is The Next
-                  Generation Of The Internet.
+                  {item.des}
                 </p>
               </div>
             </div>
