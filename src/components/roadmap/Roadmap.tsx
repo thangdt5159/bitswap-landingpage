@@ -103,11 +103,11 @@ const Roadmap = () => {
         alt=""
         className="absolute right-0 bottom-[-50%] opacity-70"
       />
-      <div className="py-[100px] px-3 relative z-[1]">
+      <div className="py-[60px] md:py-[100px] px-3 relative z-[1]">
         <div className="mb-[80px]">
           <Title header="road map" title="See Whats Waiting For You" />
         </div>
-        <div className="grid grid-cols-3 gap-10 md:max-w-[80%] mx-auto">
+        <div className="grid md:grid-cols-3 gap-5 md:gap-10 md:max-w-[80%] mx-auto">
           {roadmapData.map((item) => (
             <RoadmapCard data={item} key={item.id} />
           ))}

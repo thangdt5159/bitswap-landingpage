@@ -2,7 +2,7 @@ import React from "react";
 
 const Information = ({ data }: any) => {
   return (
-    <section className="bg-white/20 rounded-[10px] p-[15px] cursor-pointer flex justify-between ml-[25px] mb-[10px]">
+    <section className="bg-white/20 rounded-[10px] p-[15px] cursor-pointer flex flex-wrap md:flex-nowrap justify-between md:ml-[25px] mb-[10px] leading-[28px] md:leading-[32px]">
       <div>
         <h4 className="text-[20px] mb-[1px]">
           {data.stats}{" "}
@@ -24,11 +24,11 @@ const Information = ({ data }: any) => {
             {data.title}
           </sub>
         </h4>
-        <p className="text-lightGray text-[14px] leading-[32px]">{data.des}</p>
+        <p className="text-lightGray text-[14px]">{data.des}</p>
       </div>
-      <div>
+      <div className="mt-[10px] md:mt-0">
         <p className="text-[20px]">{data.amount}</p>
-        <p className="text-[14px] text-lightGray leading-[32px] text-end">
+        <p className="text-[14px] text-lightGray text-start md:text-end">
           Tokens
         </p>
       </div>

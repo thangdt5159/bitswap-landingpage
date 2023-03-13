@@ -47,9 +47,9 @@ const Features = () => {
 
   return (
     <section className="bg-[#1a1135] relative">
-      <Image src={blur1} alt="" className="absolute left-0 top-[-2%]" />
-      <Image src={blur2} alt="" className="absolute right-0 bottom-[-15%]" />
-      <div className="md:py-[100px] md:max-w-[1320px] mx-auto">
+      <Image src={blur1} alt="" className="hidden md:block absolute left-0 top-[-2%]" />
+      <Image src={blur2} alt="" className="hidden md:block absolute right-0 bottom-[-15%]" />
+      <div className="py-[60px] md:py-[100px] md:max-w-[1320px] mx-auto">
         <div className="px-3">
           <Title header="key features" title="Unlock new era" />
           <div className="md:grid grid-cols-3 gap-[24px] px-3">

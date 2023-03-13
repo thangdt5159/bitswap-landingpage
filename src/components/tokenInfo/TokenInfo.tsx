@@ -54,23 +54,23 @@ const TokenInfo = () => {
 
   return (
     <section className="bg-[#140c2d73] relative">
-      <Image src={blur1} alt="" className="absolute left-0 top-[-6%] " />
-      <Image src={blur2} alt="" className="absolute right-0 bottom-[-35%]" />
-      <div className="md:max-w-[1320px] mx-auto py-[100px]">
+      <Image src={blur1} alt="" className="hidden md:block absolute left-0 top-[-6%] " />
+      <Image src={blur2} alt="" className="hidden md:block absolute right-0 bottom-[-35%]" />
+      <div className="md:max-w-[1320px] mx-auto py-[60px] md:py-[100px]">
         <Title header="token info" title="Tokenomic" />
-        <div className="flex items-center">
+        <div className="flex flex-wrap md:flex-nowrap items-center">
           <div className="md:w-1/2 px-3 relative z-[1]">
-            <div className="bg-white/20 rounded-[30px] p-[30px]">
+            <div className="bg-white/20 rounded-[30px] p-5 md:p-[30px] mb-[30px] md:mb-0">
               <Image src={tokenImg} alt="" className="mx-auto" />
             </div>
           </div>
-          <div className="md:w-1/2 px-3 relative z-[1]">
+          <div className="md:w-1/2 px-3 md:px-3 relative z-[1]">
             {info.map((item) => (
               <Information key={item.id} data={item} />
             ))}
           </div>
         </div>
-        <p className="mt-10 text-center md:max-w-[700px] mx-auto text-lightGray leading-[32px]">
+        <p className="mt-10 text-center md:max-w-[700px] mx-auto text-lightGray leading-[28px] md:leading-[32px] px-3">
           Bitswap tokens can be used to perform different functions online,
           including staking, transaction fees, administrative voting and access
           to transactions or services.

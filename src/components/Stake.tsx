@@ -5,10 +5,10 @@ import star from "../../public/images/star.png";
 
 const Stake = () => {
   return (
-    <section className="pb-[100px]">
+    <section className="px-3 md:pb-[100px]">
       <div className="md:max-w-[1320px] mx-auto px-3 bg-bgGradient4 rounded-[30px]">
         <div className="md:flex">
-          <div className="md:w-2/3 py-[90px] px-[112px] relative">
+          <div className="md:w-2/3 p-5 md:py-[90px] md:px-[112px] relative">
             <Image
               src={star}
               alt=""
@@ -28,11 +28,11 @@ const Stake = () => {
               activities in the future, bringing more investment and profit
               opportunities to the participants.
             </p>
-            <button className="relative z-[1] before:absolute before:w-full before:h-full before:bg-bgGradient2 before:from-gradColorPink before:to-gradColorBlue before:z-[-1] before:top-0 before:left-0 before:rounded-[6px] before:scale-x-0 before:transition-all before:duration-500 hover:before:scale-x-100">
+            <button className="relative z-[1] py-[9px] px-[15px] md:py-[18px] md:px-[30px] before:absolute before:w-full before:h-full before:bg-bgGradient2 before:from-gradColorPink before:to-gradColorBlue before:z-[-1] before:top-0 before:left-0 before:rounded-[6px] before:scale-x-0 before:transition-all before:duration-500 hover:before:scale-x-100">
               Contact Us
             </button>
           </div>
-          <div className="md:w-1/3 px-3 flex items-end relative z-[1] before:absolute before:w-[350px] before:h-[350px] before:rounded-full before:bg-white/10 before:top-[20%] before:z-[-1]">
+          <div className="md:w-1/3 px-3 flex items-end relative z-[1] overflow-hidden before:absolute before:w-[350px] before:h-[350px] before:rounded-full before:bg-white/10 before:top-[20%] before:z-[-1]">
             <Image src={stakeImg} alt="" className="mx-auto" />
           </div>
         </div>

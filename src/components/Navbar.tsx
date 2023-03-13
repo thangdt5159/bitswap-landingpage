@@ -33,7 +33,7 @@ const Navbar = () => {
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
 
-    if (currentScrollPos > 104) {
+    if (currentScrollPos > 99) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -48,7 +48,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-bgBlack w-full z-10 absolute">
+      <nav className="bg-bgBlack w-full z-[11] absolute">
         <div className="md:max-w-[1780px] mx-auto py-[10px] px-3 md:py-0 md:px-[30px] text-white flex items-center justify-between">
           <Image
             src={logo}
@@ -59,7 +59,6 @@ const Navbar = () => {
             {menuData.map((item) => (
               <li
                 key={item.id}
-                title={item.title}
                 className={`mx-10 my-10 relative cursor-pointer before:absolute before:w-0 before:h-[2px] before:bg-bgGradient1 before:from-gradColor1 before:to-gradColor2 before:right-0 before:bottom-[-3px] before:transition-all before:duration-500 hover:before:w-full hover:before:right-auto hover:before:left-0 ${
                   isActive === item.id && "before:w-full"
                 }`}
@@ -76,7 +75,7 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           <div
-            className="md:hidden w-9 h-8 flex flex-col justify-center gap-1"
+            className="md:hidden w-9 h-8 flex flex-col justify-center gap-1 relative z-[1000]"
             onClick={() => setIsToggle(!isToggle)}
           >
             {!isToggle ? (
@@ -91,16 +90,17 @@ const Navbar = () => {
           </div>
         </div>
         <div
-          className={`fixed bg-white w-[95%] mx-auto left-0 right-0 transition-all duration-500 ${
-            isToggle ? "h-[200px]" : "h-0"
+          className={`fixed bg-white w-[95%] mx-auto left-0 right-0 transition-all duration-500 overflow-hidden rounded-b-[4px] ${
+            isToggle && !isVisible ? "h-[285px]" : "h-0"
           }`}
         >
           <ul className="text-black">
             {menuData.map((item) => (
               <li
                 key={item.id}
-                title={item.title}
-                className="font-medium"
+                className={`font-medium text-center border-t border-[#DBEEFD] py-4 px-5 ${
+                  isActive === item.id && "text-gradColorBlue"
+                }`}
                 onClick={() => setIsActive(item.id)}
               >
                 {item.title}
@@ -117,13 +117,17 @@ const Navbar = () => {
             : "-translate-y-[104px] opacity-0"
         }`}
       >
-        <div className="md:max-w-[1780px] mx-auto md:px-[30px] text-white flex items-center">
-          <Image src={logo} alt="" className="w-auto h-[60px] cursor-pointer" />
+        <div className="md:max-w-[1780px] mx-auto py-[10px] px-3 md:py-0 md:px-[30px] text-white flex items-center justify-between">
+          <Image
+            src={logo}
+            alt=""
+            className="w-auto h-10 md:h-[60px] cursor-pointer"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          />
           <ul className="hidden md:flex items-center mx-auto">
             {menuData.map((item) => (
               <li
                 key={item.id}
-                title={item.title}
                 className={`mx-10 my-10 relative cursor-pointer before:absolute before:w-0 before:h-[2px] before:bg-bgGradient1 before:from-gradColor1 before:to-gradColor2 before:right-0 before:bottom-[-3px] before:transition-all before:duration-500 hover:before:w-full hover:before:right-auto hover:before:left-0 ${
                   isActive === item.id && "before:w-full"
                 }`}
@@ -137,15 +141,53 @@ const Navbar = () => {
           <div className="hidden md:block relative z-[1] bg-bgGradient2 from-gradColorPink to-gradColorBlue py-[18px] px-[30px] font-bold leading-[18px] rounded-[6px] cursor-pointer before:absolute before:w-full before:h-full before:bg-bgGradient1 before:from-gradColor1 before:to-gradColor2 before:left-0 before:top-0 before:rounded-[6px] before:z-[-1] before:transition-all before:duration-500 before:scale-x-0 hover:before:scale-x-100">
             Apply For IDO
           </div>
+          <div
+            className="md:hidden w-9 h-8 flex flex-col justify-center gap-1"
+            onClick={() => setIsToggle(!isToggle)}
+          >
+            {!isToggle ? (
+              <>
+                <span className="w-full h-1 rounded-[3px] bg-white"></span>
+                <span className="w-full h-1 rounded-[3px] bg-white"></span>
+                <span className="w-full h-1 rounded-[3px] bg-white"></span>
+              </>
+            ) : (
+              <span className="text-center font-bold text-[18px]">X</span>
+            )}
+          </div>
+        </div>
+
+        <div
+          className={`bg-white fixed w-[95%] mx-auto left-0 right-0 transition-all duration-500 overflow-hidden rounded-b-[4px] ${
+            isToggle ? "h-[285px]" : "h-0"
+          }`}
+        >
+          <ul className="text-black">
+            {menuData.map((item) => (
+              <li
+                key={item.id}
+                className={`font-medium text-center border-t border-[#DBEEFD] py-4 px-5 ${
+                  isActive === item.id && "text-gradColorBlue"
+                }`}
+                onClick={() => setIsActive(item.id)}
+              >
+                {item.title}
+              </li>
+            ))}
+          </ul>
         </div>
       </nav>
 
       {/* To top page */}
       <div
-        className={`w-10 h-[12px] bg-gradColorBlue absolute transition-opacity duration-500 ${
+        className={`to-top-icon w-10 h-[42px] bg-gradColorBlue fixed z-[1000] right-[3%] bottom-[10%] flex justify-center items-center rounded-[5px] cursor-pointer ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
-      ></div>
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        <i className="fa-solid fa-caret-up absolute translate-y-0 transition-all duration-300"></i>
+        <i className="fa-solid fa-caret-up absolute translate-y-[10px] opacity-0 transition-all duration-300"></i>
+      </div>
     </>
   );
 };

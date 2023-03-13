@@ -46,21 +46,21 @@ const Section5 = () => {
 
   return (
     <section className="bg-[#1a1135]">
-      <div className="md:pb-[100px] md:max-w-[1320px] mx-auto">
+      <div className="pb-[60px] md:pb-[100px] md:max-w-[1320px] mx-auto">
         <div className="px-3">
           <Title title="Your Ultimate DeFi Destination" header="Our Products" />
-          <div className="flex justify-center gap-[10px] mb-[50px]">
+          <div className="flex flex-wrap md:flex-no justify-center gap-[10px] mb-[30px] md:mb-[50px]">
             {tab.map((item) => (
               <div
                 key={item.id}
                 onClick={() => setActiveTab(item.id)}
-                className={`p-[2px] md:max-w-[400px] ${
+                className={`p-[2px] min-w-[150px] md:max-w-[400px] ${
                   activeTab === item.id
                     ? "bg-bgGradient1 from-gradColor1 to-gradColor2"
                     : "bg-[#0F0824]"
                 } rounded-[10px] cursor-pointer`}
               >
-                <div className="capitalize bg-[#0F0824] h-full flex items-center justify-center text-center py-7 px-[90px] rounded-[10px] text-[20px] font-medium select-none">
+                <div className="capitalize bg-[#0F0824] h-full flex items-center justify-center text-center p-[10px] md:py-7 md:px-[90px] rounded-[10px] text-[20px] font-medium select-none">
                   <p>{item.title}</p>
                 </div>
               </div>
@@ -70,20 +70,20 @@ const Section5 = () => {
           {content.map((item) => (
             <div
               key={item.id}
-              className={`md:max-w-[1140px] mx-auto transition-all duration-500 ${
-                activeTab === item.id ? "opacity-100" : "h-0 opacity-0"
+              className={`md:max-w-[1140px] mx-auto ${
+                activeTab === item.id ? "opacity-100 transition-all duration-500" : "h-0 opacity-0"
               }`}
             >
               <Image
                 src={item.image}
                 alt=""
-                className="mb-[60px] rounded-[65px]"
+                className="mb-[30px] md:mb-[60px] rounded-[18px] md:rounded-[65px]"
               />
-              <div className="mx-[50px] flex">
-                <div className="md:w-[41.5%] px-3 text-[32px] font-GilroyBold">
+              <div className="md:mx-[50px] flex flex-wrap md:flex-nowrap">
+                <div className="md:w-[41.5%] px-3 text-[22px] md:text-[32px] font-GilroyBold">
                   {item.title}
                 </div>
-                <p className="md:w-[58.5%] px-3 leading-[32px] text-lightGray">
+                <p className="md:w-[58.5%] px-3 text-[15px] md:text-base leading-[28px] md:leading-[32px] text-lightGray">
                   {item.des}
                 </p>
               </div>

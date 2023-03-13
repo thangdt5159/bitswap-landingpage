@@ -17,15 +17,15 @@ export default function Home() {
       <Navbar />
       <Header />
       {/* <Partners /> */}
-      {/* <AboutUs /> */}
-      {/* <Features /> */}
-      {/* <Section5 /> */}
-      {/* <TokenInfo /> */}
-      {/* <Roadmap /> */}
-      {/* <Reward /> */}
-      {/* <Stake /> */}
+      <AboutUs />
+      <Features />
+      <Section5 />
+      <TokenInfo />
+      <Roadmap />
+      <Reward />
+      <Stake />
       {/* <OurProjects /> */}
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }

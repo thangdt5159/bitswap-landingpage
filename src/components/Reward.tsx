@@ -29,15 +29,15 @@ const Reward = () => {
       <Image
         src={star}
         alt=""
-        className="absolute right-[10%] top-[10%] animate-spin"
+        className="absolute right-1/2 top-[13%] md:right-[10%] md:top-[10%] animate-spin"
       />
-      <div className="md:max-w-[1320px] mx-auto pt-[150px] pb-[120px] px-3">
+      <div className="md:max-w-[1320px] mx-auto md:pt-[150px] md:pb-[120px] py-[60px] px-3">
         <Title header="grow and expand" title="Decentralized Revolution" />
-        <div className="flex">
+        <div className="flex flex-wrap">
           {rewardData.map((item) => (
             <div
               key={item.id}
-              className="relative px-3 md:w-1/2 overflow-hidden before:absolute before:bg-bgGradient3 before:w-full before:h-full before:opacity-80"
+              className="relative px-3 md:w-1/2 overflow-hidden before:absolute before:bg-bgGradient3 before:w-full before:h-full before:opacity-80 mb-[30px] last-of-type:mb-0"
               onMouseEnter={() => {
                 setIsHover(true);
                 setTab(item.id);
@@ -46,17 +46,17 @@ const Reward = () => {
             >
               <Image src={item.image} alt="" className="rounded-[45px]" />
               <div
-                className={`absolute w-[calc(100%_-_24px)] h-full mx-auto left-0 right-0 rounded-[30px] bg-bgGradient1 from-gradColor1 to-gradColor2 py-[30px] px-[80px] top-0 transition-all duration-500 z-[1] opacity-90 text-center flex items-center justify-center ${
+                className={`absolute w-[calc(100%_-_24px)] h-full mx-auto left-0 right-0 rounded-[30px] bg-bgGradient1 from-gradColor1 to-gradColor2 p-[10px] md:py-[30px] md:px-[80px] top-0 transition-all duration-500 z-[1] opacity-90 text-center flex items-center justify-center ${
                   isHover && tab === item.id
                     ? "translate-y-0"
                     : "translate-y-[-100%]"
                 }`}
               >
                 <div>
-                  <h3 className="text-[25px] font-GilroyBold mb-[30px]">
+                  <h3 className="text-[22px] md:text-[25px] font-GilroyBold mb-[15px] md:mb-[30px]">
                     {item.title}
                   </h3>
-                  <p className="text-[#FDFDFD] leading-[32px] capitalize">
+                  <p className="text-[#FDFDFD] leading-[28px] md:leading-[32px] capitalize">
                     {item.des}
                   </p>
                 </div>
