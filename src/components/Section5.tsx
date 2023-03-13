@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Title from "./common/Title";
 import Image from "next/image";
-import launchpadImg from "../../public/images/Launchpad-img.jpg";
+import launchpadImg from "../../public/images/launchpad-img.jpg";
 import metaverse from "../../public/images/metaverse.jpg";
 import metaFi from "../../public/images/meta-fi.jpg";
 
