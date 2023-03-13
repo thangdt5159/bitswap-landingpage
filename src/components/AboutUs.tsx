@@ -65,7 +65,7 @@ const AboutUs = () => {
                 <div
                   key={item.id}
                   onClick={() => window.open(`${item.url}`)}
-                  className="w-10 h-10 bg-white flex justify-center items-center mr-[10px] rounded-full"
+                  className="w-10 h-10 bg-white flex justify-center items-center mr-[10px] rounded-full cursor-pointer"
                 >
                   {SocialIcon(item.id)}
                 </div>
