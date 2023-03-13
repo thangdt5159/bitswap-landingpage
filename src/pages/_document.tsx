@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <title>Bitswap</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/images/logo-2.png" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
         rel="preconnect"
