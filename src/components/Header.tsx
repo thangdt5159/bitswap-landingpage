@@ -23,7 +23,7 @@ const Header = () => {
           <div className="md:max-w-[1320px] mx-auto px-3">
             <div className="mx-auto text-center">
               <h1 className="text-[30px] md:text-[82px] text-white font-GilroyBold md:font-GilroyBlack mb-5 md:leading-[105px]">
-                Swap with Speed, Security, and Bitcoin`&apos;`s Power
+                Swap with Speed, Security, and Bitcoin&apos;s Power
               </h1>
               <div className="mt-10">
                 {buttons.map((item) => (
